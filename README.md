@@ -11,6 +11,7 @@
 * [ssdt](../../blob/master/SSDT-Dell-M4800.dsl) was customzied based upon my hardware list. Probably you need to recompile based upon your own hardware configurations. 
 
 <br>
+
 ## Tested in my laptop with below configurations, fully compatible for all hardware listed below including dock station
 
 ### Basic hardware list
