@@ -5,7 +5,7 @@
 
 **Highlights:** 
 * only tested in Monterey, it does not support nvidia card natively due to known issue in Monterey. this EFI disables eGPU by default in OpenCore config.plist. 
-* dual-GPU(nvidia) support (post installation): 
+* dual-GPU(Nvidia/Quadro) support (post installation): 
   1. remove ```-wegnoegpu``` in boot-args.
   2. install [Geforce-Kepler-patcher](https://github.com/chris1111/Geforce-Kepler-patcher)
   3. NOTE: built-in brightness key may not work if you enable dual-GPU support. Alternatively, you can install the 3rd-party [brightless slider](https://apps.apple.com/us/app/brightness-slider/id456624497?mt=12) instead to control built-in monitor and [MonitorControl](https://github.com/MonitorControl/MonitorControl) to control external monitor.
