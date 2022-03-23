@@ -4,7 +4,7 @@
 * Monterey 12.3
 
 **Highlights:** 
-* only tested in Monterey, it does not support nvidia card natively due to known issue in Monterey. this EFI disables eGPU by default in OpenCore config.plist. 
+* only tested in Monterey, it does not support nvidia card natively due to known issue in Monterey. this EFI disables eGPU by default in OpenCore config.plist. however, you can follow post installation step to get it work.
 * dual-GPU(Nvidia/Quadro) support (post installation): 
   1. remove ```-wegnoegpu``` in boot-args.
   2. install [Geforce-Kepler-patcher](https://github.com/chris1111/Geforce-Kepler-patcher)
