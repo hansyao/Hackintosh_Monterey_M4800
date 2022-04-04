@@ -62,7 +62,7 @@ None
 
 **Bugs:**
 * sometimes touchpad broken when reboot - you can hit <kbd>Win</kbd>+<kbd>Alt</kbd> until login screen show up to solve this issue when boot up. 
-* Buit-in O2 Micro SDCard Reader: it does work, but sometime might not mount sdcard successfully.
+* Buit-in O2 Micro SDCard Reader: it does work, but sometime might not mount sdcard successfully.(bug was fixed in [release 0.4](../../releases/tag/0.4))
 
 ### PCI LIST
 ```
