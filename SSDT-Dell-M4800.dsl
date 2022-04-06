@@ -1,3 +1,8 @@
+/*
+    @author: Hans Yao <hansyow@gmail.com>
+    @license: MIT
+*/
+
 //  this ACPI patch only tested in Dell Precision M4800 with below hardware configurations. please read carefully before apply to your own laptop.
 
 // what works: All hardware work perfectly. it's approximately 100% approach to Macbook Pro.
@@ -926,6 +931,10 @@ DefinitionBlock ("", "SSDT", 1, "DELL", "M4800", 0)
                     Store (Package()
                     {
                         "device-id", Buffer() { 0x12, 0x04, 0x00, 0x00 },
+                        "@0,backlight-control", Buffer() { 0x01, 0x00, 0x00, 0x00 },
+                        "AAPL,backlight-control", Buffer() { 0x01, 0x00, 0x00, 0x00 },
+                        "AAPL00,backlight-control", Buffer() { 0x01, 0x00, 0x00, 0x00 },
+                        "applbkl", Buffer() { 0x01, 0x00, 0x00, 0x00 },
                         "pci-aspm-default",0x03,
                         "AAPL,ig-platform-id", Buffer() { 0x06, 0x00, 0x26, 0x0a },
                         "framebuffer-patch-enable", Buffer() { 0x01, 0x00, 0x00, 0x00 },
@@ -1279,8 +1288,12 @@ DefinitionBlock ("", "SSDT", 1, "DELL", "M4800", 0)
                             })
                         }
 
-                        Store (Package (0x0E)
+                        Store (Package ()
                         {
+                            "@0,backlight-control", Buffer() { 0x00, 0x00, 0x00, 0x00 },
+                            "AAPL,backlight-control", Buffer() { 0x00, 0x00, 0x00, 0x00 },
+                            "AAPL00,backlight-control", Buffer() { 0x00, 0x00, 0x00, 0x00 },
+                            "applbkl", Buffer() { 0x00, 0x00, 0x00, 0x00 },
                             "@0,connector-type", 
                             Buffer (0x04)
                             {
