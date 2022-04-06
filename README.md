@@ -4,11 +4,10 @@
 * Monterey 12.3
 
 **Highlights:** 
-* only tested in Monterey, it does not support nvidia card natively due to known issue in Monterey. this EFI disables eGPU by default in OpenCore config.plist. however, you can follow post installation step to get it work.
+* only tested in Monterey, it removed nvidia drive natively due to known issue in Monterey. this EFI enables eGPU by default in OpenCore config.plist. You can follow post installation step to install nvidia drive if you intended to enable mxm graphic card.
 * dual-GPU(Nvidia/Quadro) support (post installation): 
-  1. remove ```-wegnoegpu``` in boot-args.
-  2. install [Geforce-Kepler-patcher](https://github.com/chris1111/Geforce-Kepler-patcher)
-  3. NOTE: built-in brightness key may not work if you enable dual-GPU support. Alternatively, you can install the 3rd-party [brightless slider](https://apps.apple.com/us/app/brightness-slider/id456624497?mt=12) instead to control built-in monitor and [MonitorControl](https://github.com/MonitorControl/MonitorControl) to control external monitor.
+  1. install [Geforce-Kepler-patcher](https://github.com/chris1111/Geforce-Kepler-patcher)
+  2. NOTE: You can install [MonitorControl](https://github.com/MonitorControl/MonitorControl) to control both internal and external monitor brightness.
 
 * ```AppleALC.kext```, ```VoodooPS2Controller.kext``` were customized for M4800. You could find the repo here: [AppleALC](https://github.com/hansyao/AppleALC) and [OS-X-ALPS-DRIVER](https://github.com/hansyao/OS-X-ALPS-DRIVER).
 * You can also find the user guide which how I fixed the keyboard and sound card driver here. [How to fix AppleALC for Dell Precision M4800](https://blog.oneplus-solution.com/Dell_Precision_M4800_AppleALC_fix) and [how to fix keyboard/touchpad drive for Dell Precision M4800](https://blog.oneplus-solution.com/Dell_M4800_keyboard_fix) (both in Chinese).
@@ -62,7 +61,6 @@ None
 
 **Bugs:**
 * sometimes touchpad broken when reboot - you can hit <kbd>Win</kbd>+<kbd>Alt</kbd> until login screen show up to solve this issue when boot up. 
-* Buit-in O2 Micro SDCard Reader: ~~it does work, but sometime might not mount sdcard successfully.~~(bug was fixed in [release 0.4](../../releases/tag/0.4))
 
 ### PCI LIST
 ```
