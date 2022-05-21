@@ -4,6 +4,7 @@
 * Monterey 12.3
 
 **Highlights:** 
+* BIOS Configuration: **MUST** disable `Secure Boot`. For other options, it would be fine if just keep by default.
 * only tested in Monterey, it removed nvidia drive natively due to known issue in Monterey. this EFI enables eGPU by default in OpenCore config.plist. You can follow post installation step to install nvidia drive if you intended to enable mxm graphic card.
 * dual-GPU(Nvidia/Quadro) support (post installation): 
   1. install [Geforce-Kepler-patcher](https://github.com/chris1111/Geforce-Kepler-patcher)
