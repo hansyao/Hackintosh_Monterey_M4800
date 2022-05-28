@@ -14,7 +14,15 @@
 * You can also find the user guide how I fixed the keyboard and sound card driver here. [How to fix AppleALC for Dell Precision M4800](https://blog.oneplus-solution.com/Dell_Precision_M4800_AppleALC_fix) and [how to fix keyboard/touchpad drive for Dell Precision M4800](https://blog.oneplus-solution.com/Dell_M4800_keyboard_fix) (both in Chinese).
 * AppleALC for Dell Precision M4800 support(layout-id 59) has been merged to [acidanthera/AppleALC](https://github.com/acidanthera/AppleALC/pull/773) from release version [1.7.1](https://github.com/acidanthera/AppleALC/releases/tag/1.7.1). You would be able to update the driver from [acidanthera/AppleALC](https://github.com/acidanthera/AppleALC) going forward.
 * [ssdt](../../blob/master/SSDT-Dell-M4800.dsl) was customzied based upon my hardware list. Probably you need to recompile based upon your own hardware configurations. if you have already cloned this repo in macOS, just simply modify **SSDT-Dell-M4800.dsl** in any text editor, and then save and run `make all` in terminal. or you can also compile it in Linux or Windows platform if you have correct iASL version.
-
+* Wireless Driver: 
+  * this EFI is based upon `Broadcom BCM4352`. For Intel WIFI adapter, you may remove below 4 kexts from my EFI package instead of appropriate [Intel driver](https://openintelwireless.github.io/General/Installation.html) 
+	```
+	AirportBrcmFixup.kext
+	BlueToolFixup.kext
+	BrcmFirmwareData.kext
+	BrcmPatchRAM3.kext
+	```
+	In the meanwhile, you can remove [line 1379-1408](../blob/master/SSDT-Dell-M4800.dsl#L1379-L1408)  in dsl file [SSDT-Dell-M4800.dsl](../blob/master/SSDT-Dell-M4800.dsl), and then recompile to replace [SSDT-Dell-M4800.aml](../blob/master/EFI/OC/ACPI/SSDT-Dell-M4800.aml) (It's **not mandatory**)
 <br>
 
 ## Tested in my laptop with below configurations, fully compatible for all hardware listed below including dock station
@@ -64,7 +72,7 @@ None
 **Bugs:**
 None
 
-### PCI LIST
+### PCI LIST (get it by run shell in linux: `lspci -nn`)
 ```
 00:00.0 Host bridge [0600]: Intel Corporation Xeon E3-1200 v3/4th Gen Core Processor DRAM Controller [8086:0c04] (rev 06)
 00:01.0 PCI bridge [0604]: Intel Corporation Xeon E3-1200 v3/4th Gen Core Processor PCI Express x16 Controller [8086:0c01] (rev 06)
