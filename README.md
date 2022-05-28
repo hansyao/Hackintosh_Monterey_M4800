@@ -1,7 +1,8 @@
 # Dell Precision M4800 Workstation - Hackintosh
-
 * OpenCore Version 0.7.9
 * Monterey 12.3
+
+>it's tested based on M4800, however, it should be also applied to Dell Precision M6800 which hardware similar to M4800
 
 **Highlights:** 
 * BIOS Configuration: **MUST** disable `Secure Boot`. For other options, it would be fine if just keep by default.
