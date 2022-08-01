@@ -23,7 +23,7 @@
 	BrcmFirmwareData.kext
 	BrcmPatchRAM3.kext
 	```
-	In the meanwhile, you can remove [line 1379-1408](../master/SSDT-Dell-M4800.dsl#L1379-L1408)  in dsl file [SSDT-Dell-M4800.dsl](../master/SSDT-Dell-M4800.dsl), and then recompile to replace [SSDT-Dell-M4800.aml](../blob/master/EFI/OC/ACPI/SSDT-Dell-M4800.aml) (It's **not mandatory**)
+	In the meanwhile, you can remove [line 1392-1421](../master/SSDT-Dell-M4800.dsl#L1392-L1421)  in dsl file [SSDT-Dell-M4800.dsl](../master/SSDT-Dell-M4800.dsl), and then recompile to replace [SSDT-Dell-M4800.aml](../blob/master/EFI/OC/ACPI/SSDT-Dell-M4800.aml) (It's **not mandatory**)
 <br>
 
 ## Tested in my laptop with below configurations, fully compatible for all hardware listed below including dock station
